@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ddf0dd;
+}
+
+header {
+    background-color: #0c580c;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.box input[type="text"] {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Adds space between images */
+    padding: 20px;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container img {
+    display: block;
+    width: 300px;
+    height: 360px;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.image-container:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 181, 236, 0.5); /* Light blue color with some transparency */
+    z-index: 1; /* Make sure the background is above the image */
+}
+
+.image-container img {
+    position: relative;
+    z-index: 0; /* Place the image behind the pseudo-element */
+}
+
+footer {
+    text-align: center;
+    padding: 0.5px;
+    background: #abd4ab;
+    color: rgb(12, 6, 6);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
